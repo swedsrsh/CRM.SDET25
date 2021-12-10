@@ -5,7 +5,11 @@
     <classes>
       <class name="com.crm.project.OrgPractice">
         <methods>
+          <include name="configAfterClass"/>
+          <include name="configAfterMethod"/>
+          <include name="configBeforeClass"/>
           <include name="createorg"/>
+          <include name="configBeforeMethod"/>
         </methods>
       </class> <!-- com.crm.project.OrgPractice -->
     </classes>

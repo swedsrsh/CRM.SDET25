@@ -15,27 +15,35 @@ import com.crm.pomObjectRepositoryLib.LoginPage;
 
 public class BaseClass {
 
-	WebDriver driver= null;
+	public WebDriver driver= null;
 	@BeforeClass
 	public void configBeforeClass()
 	{
-		WebDriver driver= new ChromeDriver();
+		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get("http://localhost:8888/");
+		
 	}
 	@BeforeMethod
 	public void configBeforeMethod() {
+		driver.get("http://localhost:8888/");
 		LoginPage l= new LoginPage(driver);
 		l.getUsername().sendKeys("admin");
 		l.getPassword().sendKeys("admin");
 		l.getLoginButton().click();
 	}
-	/*@AfterMethod
+	@AfterMethod
 	public void configAfterMethod() {
-		WebElement element = HomePage.getSingOutImg();
+		
+	HomePage home= new HomePage(driver);
+		WebElement element = home.getSingOutImg();
 		Actions actioin = new Actions(driver);
 		actioin.moveToElement(element).perform();
-		home.getSingOut().click(); */
+		home.getSingOut().click();
 	}
-
+	@AfterMethod
+	public void configAfterClass()
+	{
+		driver.close();
+	}
+}
