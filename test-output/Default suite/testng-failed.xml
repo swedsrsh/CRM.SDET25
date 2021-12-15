@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.project.OrgPractice">
+      <class name="com.crm.project.failedgetDataFromcommandLineTest">
         <methods>
-          <include name="configAfterClass"/>
-          <include name="configAfterMethod"/>
-          <include name="configBeforeClass"/>
-          <include name="createorg"/>
-          <include name="configBeforeMethod"/>
+          <include name="commandlineTest"/>
         </methods>
-      </class> <!-- com.crm.project.OrgPractice -->
+      </class> <!-- com.crm.project.failedgetDataFromcommandLineTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
