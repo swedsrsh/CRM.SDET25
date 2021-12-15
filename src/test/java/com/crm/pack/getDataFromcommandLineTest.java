@@ -1,4 +1,4 @@
-package com.crm.project;
+package com.crm.pack;
 
 import org.testng.annotations.Test;
 
