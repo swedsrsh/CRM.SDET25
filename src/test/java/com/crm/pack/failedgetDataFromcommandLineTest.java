@@ -14,6 +14,10 @@ public class failedgetDataFromcommandLineTest {
 	 System.out.println(username);
 	 System.out.println(password);
 	 
+	 
+	 
+	 
+	 
 	}
 }
 // for this am intentionally doing fail for testing failed test case 
